@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PureSoft.Configuration.Json</name>
+    </assembly>
+    <members>
+        <member name="T:PureSoft.Configuration.Json.JsonConfigurationFormat">
+            <summary>
+            Stellt das Json-Format zum schreiben und lesen von Einstellungen dar.
+            </summary>
+        </member>
+        <member name="P:PureSoft.Configuration.Json.JsonConfigurationFormat.Indented">
+            <summary>
+            Legt fest, ob die Ausgabe formatiert werden soll.
+            </summary>
+        </member>
+    </members>
+</doc>

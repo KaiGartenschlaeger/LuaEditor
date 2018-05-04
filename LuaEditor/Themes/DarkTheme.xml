@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Theme name="Dunkel">
+  <Font name="Consolas" size="12" />
+
+  <Colors
+    background="27,27,27"
+    text="128,128,128">
+
+    <Color category="Carret"
+           text="128,128,128" />
+    <Color category="CurrentLine"
+           background="40,40,40" />
+
+    <Color category="Comments"
+           text="113,255,149" />
+
+    <Color category="LineNumbers"
+           background="40,40,40"
+           text="129,129,129" />
+
+    <Color category="Numbers"
+           text="255,255,128" />
+    <Color category="Keywords"
+           text="0,186,196" />
+    <Color category="String"
+           text="255,143,32" />
+    <Color category="Operators"
+           text="180,180,180" />
+
+    <Color category="Selection"
+           background="145,145,145"
+           text="0,0,0" />
+
+    <Color category="PreProcessor"
+           text="155,155,155" />
+
+    <Color category="Identifier"
+           text="255,255,255" />
+  </Colors>
+</Theme>

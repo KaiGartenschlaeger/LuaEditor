@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Theme name="Hell">
+  <Font name="Consolas" size="12" />
+
+  <Colors
+    background="255,255,255" text="0,0,0">
+
+    <Color category="LineNumbers"
+           background="240,240,240" 
+           text="41,146,175" />
+    
+    <Color category="String" 
+           text="163,21,21" />
+    <Color category="Keywords" 
+           text="41,146,175" />
+    <Color category="Comments" 
+           text="0,128,0" />
+
+    <Color category="Selection"
+       background="51,153,255"
+       text="255,255,255" />
+
+  </Colors>
+</Theme>

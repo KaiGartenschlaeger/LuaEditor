@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PureSoft.Configuration</name>
+    </assembly>
+    <members>
+        <member name="T:PureSoft.Configuration.ConfigurationSet">
+            <summary>
+            Stellt eine Sammlung von Einstellungen dar.
+            </summary>
+        </member>
+        <member name="M:PureSoft.Configuration.ConfigurationSet.#ctor(PureSoft.Configuration.IConfigurationFormat)">
+            <summary>
+            Stellt eine Sammlung von Einstellungen dar.
+            </summary>
+        </member>
+        <member name="M:PureSoft.Configuration.ConfigurationSet.Read(System.String)">
+            <summary>
+            Liest die Einstellungen aus der angegebenen Datei.
+            </summary>
+        </member>
+        <member name="M:PureSoft.Configuration.ConfigurationSet.Read(System.IO.Stream)">
+            <summary>
+            Liest die Einstellungen aus den angegebenen Stream.
+            </summary>
+        </member>
+        <member name="M:PureSoft.Configuration.ConfigurationSet.Save(System.String)">
+            <summary>
+            Schreibt die Einstellungen in eine Datei.
+            </summary>
+        </member>
+        <member name="M:PureSoft.Configuration.ConfigurationSet.Save(System.IO.Stream)">
+            <summary>
+            Schreibt die Einstellungen in einen Stream.
+            </summary>
+        </member>
+        <member name="P:PureSoft.Configuration.IConfigurationGroup.Name">
+            <summary>
+            Returns the name of the group.
+            </summary>
+        </member>
+        <member name="M:PureSoft.Configuration.IConfigurationGroupContainer.SetGroup(System.String)">
+            <summary>
+            Returns the specified group.
+            Creates a new one if not exist.
+            </summary>
+        </member>
+        <member name="P:PureSoft.Configuration.IConfigurationGroupContainer.Groups">
+            <summary>
+            Contains the groups.
+            </summary>
+        </member>
+        <member name="M:PureSoft.Configuration.IConfigurationGroupCollection.Set(System.String)">
+            <summary>
+            Returns the group with specified name or creates a new one if not exist.
+            </summary>
+        </member>
+        <member name="P:PureSoft.Configuration.IConfigurationGroupCollection.Count">
+            <summary>
+            Returns the count of groups.
+            </summary>
+        </member>
+        <member name="T:PureSoft.Configuration.Xml.XmlConfigurationFormat">
+            <summary>
+            Stellt das Xml-Format zum schreiben und lesen von Einstellungen dar.
+            </summary>
+        </member>
+        <member name="M:PureSoft.Configuration.Xml.XmlConfigurationFormat.Save(PureSoft.Configuration.IConfigurationSet,System.IO.Stream)">
+            <summary>
+            Schreibt die Einstellungen in einen Stream.
+            </summary>
+        </member>
+        <member name="M:PureSoft.Configuration.Xml.XmlConfigurationFormat.Read(PureSoft.Configuration.IConfigurationSet,System.IO.Stream)">
+            <summary>
+            Liest die Einstellungen aus den Stream.
+            </summary>
+        </member>
+        <member name="T:PureSoft.Configuration.Xml.XmlConfigurationSet">
+            <summary>
+            Stellt eine Sammlung von Einstellungen im Xml-Format dar.
+            </summary>
+        </member>
+        <member name="M:PureSoft.Configuration.Xml.XmlConfigurationSet.#ctor">
+            <summary>
+            Stellt eine Sammlung von Einstellungen im Xml-Format dar.
+            </summary>
+        </member>
+    </members>
+</doc>

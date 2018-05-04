@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C591BD48-D1BE-4FA6-84BE-579D2581FBB8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LuaEditor</RootNamespace>
+    <AssemblyName>LuaEditor</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>LuaEditor.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Blueprint.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PureSoft.Configuration">
+      <HintPath>..\Libraries\PureSoft.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="PureSoft.Configuration.Json">
+      <HintPath>..\Libraries\PureSoft.Configuration.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="ScintillaNET">
+      <HintPath>..\Libraries\ScintillaNET.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dialogs\Controls\ConsoleControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Controls\ConsoleControl.Designer.cs">
+      <DependentUpon>ConsoleControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Controls\EditorTabsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Controls\EditorTabsControl.Designer.cs">
+      <DependentUpon>EditorTabsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Controls\LuaKeywordLists.cs" />
+    <Compile Include="Dialogs\Controls\ScintillaPosEventArgs.cs" />
+    <Compile Include="Dialogs\Controls\ScintillaWrapperControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Controls\ScintillaWrapperControl.Designer.cs">
+      <DependentUpon>ScintillaWrapperControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Controls\LuaLexerStyles.cs" />
+    <Compile Include="Dialogs\Controls\ProjectEntryEventArgs.cs" />
+    <Compile Include="Dialogs\Controls\ProjectTreeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Controls\ProjectTreeControl.Designer.cs">
+      <DependentUpon>ProjectTreeControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FormNewFolder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FormNewFolder.Designer.cs">
+      <DependentUpon>FormNewFolder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FormNewFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FormNewFile.Designer.cs">
+      <DependentUpon>FormNewFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FormSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FormSettings.Designer.cs">
+      <DependentUpon>FormSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FormSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FormSearch.Designer.cs">
+      <DependentUpon>FormSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FormReplace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FormReplace.Designer.cs">
+      <DependentUpon>FormReplace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FormNewProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FormNewProject.Designer.cs">
+      <DependentUpon>FormNewProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Exceptions\AttributeNotFoundException.cs" />
+    <Compile Include="Exceptions\NodeNotFoundException.cs" />
+    <Compile Include="Helper\FileHelper.cs" />
+    <Compile Include="Helper\GuidHelper.cs" />
+    <Compile Include="Helper\PathHelper.cs" />
+    <Compile Include="Helper\XmlDocumentHelper.cs" />
+    <Compile Include="Manager\LuaRunner.cs" />
+    <Compile Include="Plugins\PluginHost.cs" />
+    <Compile Include="Plugins\PluginInfo.cs" />
+    <Compile Include="Plugins\PluginManager.cs" />
+    <Compile Include="Manager\ProjectChangedEventArgs.cs" />
+    <Compile Include="Manager\ProjectManager.cs" />
+    <Compile Include="Objetcts\EditorFormSettings.cs" />
+    <Compile Include="Objetcts\EditorRunnerSettings.cs" />
+    <Compile Include="Objetcts\EditorSettings.cs" />
+    <Compile Include="Objetcts\EditorTheme.cs" />
+    <Compile Include="Objetcts\EditorThemeColor.cs" />
+    <Compile Include="Objetcts\EditorThemeCategory.cs" />
+    <Compile Include="Objetcts\ProjectEntry.cs" />
+    <Compile Include="Objetcts\ProjectEntryType.cs" />
+    <Compile Include="Objetcts\ProjectSettings.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Dialogs\Controls\ConsoleControl.resx">
+      <DependentUpon>ConsoleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Controls\EditorTabsControl.resx">
+      <DependentUpon>EditorTabsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Controls\ScintillaWrapperControl.resx">
+      <DependentUpon>ScintillaWrapperControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Controls\ProjectTreeControl.resx">
+      <DependentUpon>ProjectTreeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FormNewFolder.resx">
+      <DependentUpon>FormNewFolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FormNewFile.resx">
+      <DependentUpon>FormNewFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FormSettings.resx">
+      <DependentUpon>FormSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FormSearch.resx">
+      <DependentUpon>FormSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FormReplace.resx">
+      <DependentUpon>FormReplace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FormNewProject.resx">
+      <DependentUpon>FormNewProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\Xpm_Event.xpm" />
+    <None Include="Resources\Xpm_Function.xpm" />
+    <None Include="Resources\Xpm_Keyword.xpm" />
+    <None Include="Resources\Xpm_Snippet.xpm" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_add.png" />
+    <None Include="Resources\page_white_add.png" />
+    <None Include="Resources\lightning.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\cancel.png" />
+    <None Include="Resources\error.png" />
+    <None Include="Resources\clipboard_empty.png" />
+    <None Include="Resources\cut.png" />
+    <None Include="Resources\page_white_paste.png" />
+    <Content Include="SciLexer.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SciLexer64.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Themes\DarkTheme.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Themes\LightTheme.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\play_green.png" />
+    <Content Include="Blueprint.ico" />
+    <None Include="Resources\folder_closed.png" />
+    <None Include="Resources\folder_delete.png" />
+    <None Include="Resources\folder_link.png" />
+    <None Include="Resources\folder_page.png" />
+    <None Include="Resources\page_white.png" />
+    <None Include="Resources\page_white_delete.png" />
+    <None Include="Resources\page_white_link.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LuaEditor.Plugin\LuaEditor.Plugin.csproj">
+      <Project>{a183c3bc-05a9-4fe0-b120-871452bf2563}</Project>
+      <Name>LuaEditor.Plugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PureSoft.Controls.VisualStudio\PureSoft.Controls.VisualStudio.csproj">
+      <Project>{f0c3ce9d-2653-474a-bcc5-7017a5e93427}</Project>
+      <Name>PureSoft.Controls.VisualStudio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
